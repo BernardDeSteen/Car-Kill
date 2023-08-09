@@ -1,0 +1,50 @@
+local Carvoid = Instance.new("ScreenGui")
+local Warning = Instance.new("Frame")
+local Info = Instance.new("TextLabel")
+local Understood = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+Carvoid.Name = "Carvoid"
+Carvoid.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Carvoid.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Warning.Name = "Warning"
+Warning.Parent = Carvoid
+Warning.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+Warning.BackgroundTransparency = 0.300
+Warning.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Warning.BorderSizePixel = 0
+Warning.Position = UDim2.new(0.200438917, 0, 0.365336657, 0)
+Warning.Size = UDim2.new(0.598390639, 0, 0.0997506231, 0)
+
+Info.Name = "Info"
+Info.Parent = Warning
+Info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info.BackgroundTransparency = 1.000
+Info.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Info.BorderSizePixel = 0
+Info.Size = UDim2.new(1, 0, 1, 0)
+Info.Font = Enum.Font.Cartoon
+Info.Text = "Please make sure to Read your console Before asking me any questions. (/console in chat or F9)"
+Info.TextColor3 = Color3.fromRGB(202, 202, 202)
+Info.TextScaled = true
+Info.TextSize = 14.000
+Info.TextWrapped = true
+
+Understood.Name = "Understood"
+Understood.Parent = Warning
+Understood.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Understood.BackgroundTransparency = 1.000
+Understood.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Understood.BorderSizePixel = 0
+Understood.Position = UDim2.new(0.466540158, 0, 1.173455, 0)
+Understood.Size = UDim2.new(0.0660146773, 0, 0.75, 0)
+Understood.Image = "rbxassetid://12206884747"
+
+UICorner.Parent = Warning
+
+-- Scripts:
+Understood.MouseButton1Click:Connect(function()
+    Carvoid:Destroy()
+end)
