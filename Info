@@ -46,5 +46,5 @@ UICorner.Parent = Warning
 
 -- Scripts:
 Understood.MouseButton1Click:Connect(function()
-    Carvoid.Visible = false
+    Warning.Visible = false
 end)
